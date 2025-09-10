@@ -34,6 +34,8 @@ services:
       - "--all"
       - "--config"
       - "/etc/ngrok.yml"
+    env_file:
+      - .env
     volumes:
       - ./ngrok-config.yml:/etc/ngrok.yml
     ports:
